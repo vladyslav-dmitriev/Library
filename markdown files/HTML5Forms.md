@@ -2,6 +2,8 @@
 
 1. `placeholder`
 2. input `file`
+3. `checkbox` / `radio`
+4. input `date`
 
 
 ## Placeholder
@@ -334,13 +336,9 @@ input:-moz-placeholder, textarea::-moz-input-placeholder {
 ```sass
 .file-upload
   position: relative
-  /* Даем возможность делать позиционирование, внутри данного элемента
   overflow: hidden
-  /* Все что выходит за пределы - скрываем
   width: 20%
-  /* Задаем ширину кнопки выбора файла
   height: 20px
-  /* Задаем высоту кнопки выбора файла
   background: #6da047
   border-radius: 3px
   padding: 8px 4px
@@ -350,9 +348,7 @@ input:-moz-placeholder, textarea::-moz-input-placeholder {
     background: #7aad55
   input[type="file"]
     display: none
-    /* Обязательно скрываем настоящий Input File
   label
-    /* Растягиваем label на всю возможную площадь блока .file-upload
     display: block
     position: absolute
     top: 0
@@ -362,7 +358,6 @@ input:-moz-placeholder, textarea::-moz-input-placeholder {
     cursor: pointer
   span
     line-height: 36px
-    /* Делаем вертикальное выравнивание текста, который написан на кнопке
 
 .filename
      background: #fff
@@ -400,12 +395,9 @@ $(document).ready( function() {
 .checkbox
   input
     display: none
-    /* навсегда скрываем оригинальный input
     &:checked + span::before
       opacity: 1
-      /* при выборе input (клик на label), псведоэлемент span::before становится видимым
   span
-    /* стилизация нового псевдо-input, сам label растягивается до стилизованных элементов в нем
     position: relative
     display: inline-block
     width: 20px
@@ -414,14 +406,11 @@ $(document).ready( function() {
     border-radius: 5px
     &::before
       position: absolute
-      /* выравниваем стрелочку ровно по центру
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
-      /*content: "✔";
-      content: url('../img/bird.png')
+      content: "✔";
       opacity: 0
-      /* изначально (до клика) opacity у span равно 0
       transition: 0.2s
 ```
 
