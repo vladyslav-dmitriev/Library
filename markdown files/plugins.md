@@ -1,6 +1,6 @@
 # JavaScript Plugins
 
-**JavaScript Plugins** - полезное руководство по настройке, подключению и использовании различных полезных JavaScript плагинов.
+**JavaScript Plugins** - полезное руководство по настройке, подключению и использованию различных полезных JavaScript плагинов.
 
 ### Содержание
 
@@ -22,7 +22,7 @@
 
 #### Установка для webpack 4
 
-`npm install slick-carousel`
+`npm install slick-carousel  --save`
 
 Код файла `index.js`
 
@@ -179,7 +179,6 @@ $('.my-slider--third').slick({
 
 #### Методы и события слайдера
 
-
 `slickCurrentSlide` — возвращает номер текущего слайда. Отсчёт ведётся с нуля.
 `slickPause` — останавливает автоматическую прокрутку.
 
@@ -210,6 +209,8 @@ $('#slick-slider').on('beforeChange', function(event, slick, currentSlide, nextS
 
 ## Waypoints
 
+`npm install waypoints`
+
 #### Установка для webpack 4
 
 Подключение в файле `index.js`:
@@ -235,6 +236,8 @@ var inview = new Waypoint.Inview({
 ## Select2
 
 #### Установка для webpack 4
+
+`npm install select2 --save`
 
 Подключение в файле `index.js`:
 
@@ -343,6 +346,8 @@ selectLang.on("select2:close", function (e) {
 
 #### Установка для webpack 4
 
+`npm install simplebar --save`
+
 Подключение в файле `index.js`:
 
 ```javascript
@@ -388,6 +393,8 @@ new SimpleBar(document.getElementById('scrollEl'), {
 
 #### Установка для webpack 4
 
+`npm install fullpage.js --save`
+
 Подключение в файле `index.js`:
 
 ```javascript
@@ -430,7 +437,7 @@ $(document).ready(function() {
 ```
 Так же в `html` пишется еще `#myMenu`.
 
-#### Базовые настройски
+#### Базовые настройки
 
 [Вот тут пример](https://alvarotrigo.com/fullPage/examples/scrolling.html#secondPage/1) как сделать, чтобы на одной странице секции шли то с обычным скроллом, то с поблочным.
 
@@ -442,3 +449,4 @@ $(document).ready(function() {
 body, html
   overflow: hidden !important;
 ```
+ 
