@@ -2,7 +2,7 @@
 
 ## Получение SVG файла из PNG изображения
 
-1. Скачать **Vector Magic** (Protable Version) - https://megaup.net/145A/AppNee.com.Vector.Magic.Desktop.Edition.v1.15.Portable.FR.7z/
+1. Скачать **Vector Magic** (Portable Version) - https://megaup.net/145A/AppNee.com.Vector.Magic.Desktop.Edition.v1.15.Portable.FR.7z/
 2. Открыть `PNG` изображение в этой программе, проследовать шаг за шагом, при необходимости изменяя настройки обработки картинки
 3. Попутно можно попиксельно дорисовывать некоторые фрагменты в изображении 
 4. Сохранить файл как `SVG`
