@@ -426,3 +426,101 @@ $(document).ready( function() {
 * [PickMeUp](https://github.com/nazar-pc/PickMeUp)
 * [jqueryui datepicker](http://api.jqueryui.com/datepicker/)
 
+# HTML Responsive Tables
+
+HTML:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+<table>
+	<thead>
+		<tr>
+			<!--<th>title 0-1</th>-->
+			<th>title 0-2</th>
+			<th>title 0-3</th>
+			<th>title 0-4</th>
+			<th>title 0-5</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<!--<td>номер</td>-->
+		<td>Индусов Альберт Ибн Хатабыч Викторович</td>
+		<td>сообщение которое очень большое на две строки прямо писец ужас</td>
+		<td>Mozilla/5.0 (Windows NT 6.1; Win64; x64) Apple WebKit/53 (KHTML, like Gecko) Chrome/66.0 Mozilla/5.0 (Windows NT 6.1; Win64; x64) Apple WebKit/53 (KHTML, like Gecko) Chrome/66.0…</td>
+		<td>ссылка</td>
+	</tr>
+	<tr>
+		<!--<td>номер</td>-->
+		<td>Федоров Максим Викторович</td>
+		<td>сообщение</td>
+		<td>Mozilla/5.0 (Windows NT 6.1; Win64; x64) Apple WebKit/53 (KHTML, like Gecko) Chrome/66.0…</td>
+		<td>ссылка</td>
+	</tr>
+	</tbody>
+</table>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./index.js"></script>
+
+</body>
+</html>
+```
+
+SCSS:
+```scss
+
+@media screen and (max-width: 767px) {
+  thead {
+    display: none;
+  }
+  tbody {
+    display: flex;
+    flex-direction: column;
+  }
+  tr {
+    display: inline-block;
+    min-height: 63px;
+    position: relative;
+  }
+  td {
+    padding: 0;
+    position: relative;
+    &:nth-child(1) {
+      width: 50vw;
+    }
+    &:nth-child(2) {
+      width: 50%;
+      order: 30;
+      float: left;
+      max-height: 41px;
+      overflow: hidden;
+    }
+    &:nth-child(3) {
+      width: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-height: 41px;
+      overflow: hidden;
+    }
+    &:nth-child(4) {
+      width: 50%;
+      position: absolute;
+      top: 40px;
+      right: 0;
+    }
+  }
+}
+```
